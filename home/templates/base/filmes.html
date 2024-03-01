@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+{%for filme, imagen, link in filmes_imagens_links %}
+    <div class="inline">
+    <a href="{{ link }}" target="_blank">
+            <img src="{% static 'filmes/'|add:imagen %} " alt="" height="300">
+        </a>
+    </div>
+{% endfor %}
+{% endblock %}

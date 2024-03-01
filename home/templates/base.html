@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{% block title %}Ferreira Filmes{% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <script src="{% static 'scripts/script.js' %}"></script>
+  </head>
+  <body>
+    <nav class="menu">
+        <ul>
+            <li>
+                <a href="/">
+                    <h3>Home </h3>
+                </a>
+            </li>
+            <li>
+                <a href="/filmes">
+                    <h3>Filmes </h3>
+                </a>
+            </li>
+            <li>
+                <a href="/series">
+                    <h3>Series</h3>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    {% block content %}
+    {% endblock %}
+  </body>
+  
+</html>
